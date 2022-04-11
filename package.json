@@ -1,0 +1,52 @@
+{
+    "name": "microfront-seed-app",
+    "homepage": "https://github.com/WhyItWorks/microfront-seed-app",
+    "version": "0.0.1",
+    "description": "Template",
+    "author": "WhyItWorks",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WhyItWorks/microfront-seed-app.git"
+    },
+    "main": "dist/index.js",
+    "module": "dist/index.modern.js",
+    "source": "src/index.tsx",
+    "engines": {
+        "node": ">=16"
+    },
+    "scripts": {
+        "build": "microbundle-crl --no-compress --format modern,cjs",
+        "start": "microbundle-crl watch --no-compress --format modern,cjs",
+        "prepublish": "run-s build",
+        "predeploy": "cd example && yarn install && yarn run build"
+    },
+    "peerDependencies": {
+        "react": "^18.0.0"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^12.1.4",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.4.1",
+        "@types/node": "^16.11.26",
+        "@types/react": "^17.0.44",
+        "@types/react-dom": "^17.0.15",
+        "husky": "^7.0.4",
+        "microbundle-crl": "^0.13.11",
+        "npm-run-all": "^4.1.5",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-scripts": "5.0.0",
+        "typescript": "^4.6.3",
+        "web-vitals": "^2.1.4"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "js-cookie": "^2.2.1",
+        "sass": "^1.50.0"
+    },
+    "files": [
+        "dist"
+    ]
+}
